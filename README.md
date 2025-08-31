@@ -12,6 +12,7 @@ git config --global user.email "[valid-email]"         # Set your email for comm
 git config --global color.ui auto                      # Enable command line coloring  
 git config --list                                      # View all Git configurations  
 """
+
 ---
 
 ## SETUP & INIT  
@@ -20,6 +21,7 @@ Initializing and cloning repositories:
 git init              # Initialize an existing directory as a Git repository  
 git clone [url]       # Clone an existing repository from remote  
 """
+
 ---
 
 ## STAGE & SNAPSHOT  
@@ -34,6 +36,7 @@ git diff --staged           # Show staged changes not committed
 git commit -m "[message]"   # Commit staged content  
 git commit -am "[message]"  # Stage & commit all tracked files  
 """
+
 ---
 
 ## BRANCH & MERGE  
@@ -46,6 +49,7 @@ git checkout -b [branch]    # Create and switch to a new branch
 git merge [branch]          # Merge branch into current branch  
 git log --oneline --graph   # Visualize commit history in a compact graph  
 """
+
 ---
 
 ## INSPECT & COMPARE  
@@ -58,6 +62,7 @@ git log --follow [file]         # Show commits for a file (even after renames)
 git diff branchB...branchA      # Show differences between branches  
 git show [SHA]                  # Show details of a commit/object  
 """
+
 ---
 
 ## SHARE & UPDATE  
@@ -71,6 +76,7 @@ git push [alias] [branch]       # Push local commits to remote branch
 git pull                        # Fetch and merge from remote  
 git pull --rebase               # Rebase instead of merge when pulling  
 """
+
 ---
 
 ## UNDOING CHANGES  
@@ -82,21 +88,21 @@ git revert [commit]             # Create a new commit that undoes a previous one
 git reset --hard [commit]       # Reset branch to commit (discard all changes)  
 git clean -fd                   # Remove untracked files and directories  
 """
+
 ---
 
 ## TRACKING PATH CHANGES  
 Versioning file removals and path changes:
-
 """bash
 git rm [file]                   # Delete file and stage removal  
 git mv [old-path] [new-path]    # Rename/move file  
 git log --stat -M               # Show logs with path changes  
 """
+
 ---
 
 ## TEMPORARY COMMITS (Stash)  
 Temporarily store modified files to switch branches:
-
 """bash
 git stash           # Save modified/staged changes  
 git stash list      # List stashes  
@@ -104,11 +110,11 @@ git stash pop       # Apply and remove latest stash
 git stash apply     # Apply latest stash but keep it in stash list  
 git stash drop      # Remove the latest stash  
 """
+
 ---
 
 ## TAGGING  
 Marking specific points in history (like releases):
-
 """bash
 git tag                            # List all tags  
 git tag -a v1.0 -m "Version 1.0"   # Create an annotated tag  
@@ -116,27 +122,27 @@ git show v1.0                      # Show details of tag
 git push origin v1.0               # Push a specific tag to remote  
 git push --tags                    # Push all tags to remote  
 """
+
 ---
 
 ## REWRITE HISTORY  
 Rewriting branches, updating commits, clearing history:
-
 """bash
 git commit --amend                 # Edit the last commit (message or content)  
 git rebase [branch]                # Replay commits from current branch onto target  
 git rebase -i HEAD~n                # Interactive rebase for the last n commits  
 git reset --hard [commit]          # Reset to commit (erases history after commit)  
 """
+
 ---
 
 ## IGNORING PATTERNS  
 Preventing unintentional staging/committing of files:
-
 """bash
 git config --global core.excludesfile [file]   # Global ignore file  
 """
-Example `.gitignore` file:  
 
+Example `.gitignore` file:
 """bash
 logs/  
 *.notes  
@@ -145,15 +151,16 @@ node_modules/
 dist/  
 .env  
 """
+
 ---
 
 ## HELP  
 Get help when you need it:
-
 """bash
 git help [command]     # Show help for a specific command  
 git [command] --help   # Another way to get help  
 """
+
 ---
 
 ✨ This cheatsheet summarizes the most commonly used Git commands.  
